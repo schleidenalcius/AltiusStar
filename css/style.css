@@ -1,9 +1,29 @@
+:root{
+    --vert-sombre:#386641;
+    --vert-de-pousse:#69974e;
+    --vert-lime:#a6c856;
+    --beige:#f2e8cf;
+    --rouge-sang:#bd4749;
+}
 body {
-    /* background-color: #386641;
-    background-color: #bd4749;
-    background-color: #f2e8cf;
-    background-color: #69974e;*/
-    background-color: #a6c856;
-   
+    background-color: var(--beige);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--vert-sombre);
 }
 
+.caseAvenir {
+    font-size: 32px;
+    color: var(--vert-sombre);
+    border: #386641 2px solid;
+    background-color: var(--vert-lime);
+}   
+.contenantPersonnages {
+    display: flex;
+    margin-top: 20px;
+}
+.contenuLeo, .contenuFrieden {
+    display: flex;
+    width: 500px;
+    padding: 10px;
+    border: 2px solid var(--vert-sombre);
+}
