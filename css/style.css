@@ -1,0 +1,92 @@
+:root{
+    --facteur-echelle: 1.125;
+    --font-size: 18px;
+    --petit-texte: var(--font-size);
+    --tres-petit-texte: calc(var(--petit-texte) / var(--facteur-echelle));
+    --texte-moyen: calc(var(--petit-texte) * var(--facteur-echelle));
+    --gros-texte: calc(var(--texte-moyen) * var(--facteur-echelle));
+    --tres-gros-texte: calc(var(--gros-texte) * var(--facteur-echelle));
+
+    --vert-sombre:#386641;
+    --vert-de-pousse:#69974e;
+    --vert-lime:#a6c856;
+    --beige:#f2e8cf;
+    --rouge-sang:#bd4749;
+}
+body {
+    background-color: var(--beige);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--vert-sombre);
+    margin:0;
+}
+hr{
+    color: var(--vert-sombre)
+}
+nav{
+    display: flex;
+    justify-content: center;
+   
+}
+.actuel{
+    border-bottom: #386641 2px solid;
+}
+a{
+    color: var(--vert-sombre);
+    text-decoration: none;
+    margin-right:20px;
+}
+.caseAvenir {
+    display: flex;
+    font-size: 32px;
+    align-items: center;
+    color: var(--vert-sombre);
+    justify-content: space-evenly;
+    border-radius: 10px;
+    border: var(--vert-sombre) 2px solid;
+    width: 60px;
+    height: 60px;
+    background-color: var(--vert-lime);
+    
+}   
+.ContenantPersonnages {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-evenly;
+}
+.ContenuLeo, .ContenuFrieden {
+    display: flex;
+    gap:10vw;
+    width:40vw;
+    justify-content: center;
+    height:50vh;
+    background-color: var(--vert-de-pousse);
+    border-radius: 10px;
+    border: var(--vert-sombre) 2px solid;
+}
+
+p {
+    font-size: var(--petit-texte);
+    text-align: center;
+}
+h2{
+    text-align: center;
+    font-size: var(--gros-texte);
+}
+h3{
+    font-size: var(--texte-moyen);
+}
+h1{
+    text-align: center;
+    font-size: var(--tres-gros-texte);
+}
+
+.MissionsFrieden p, .MissionsLeo p{
+    display: flex;
+    max-width: 70vw;
+    min-width: 20vw;
+    justify-content: center;
+}
+.MissionsLeo h2, .MissionsFrieden h2{
+    background-color: var(--vert-lime);
+    border:var(--vert-sombre) 2px solid;
+}
