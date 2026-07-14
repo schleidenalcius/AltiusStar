@@ -57,13 +57,17 @@ a{
     display: flex;
     gap:10vw;
     width:40vw;
+    max-width: 70vw;
+    min-width: 20vw;
     justify-content: center;
     height:50vh;
     background-color: var(--vert-de-pousse);
     border-radius: 10px;
     border: var(--vert-sombre) 2px solid;
 }
-
+.logo{
+    text-align: center;
+}
 p {
     font-size: var(--petit-texte);
     text-align: center;
@@ -80,10 +84,9 @@ h1{
     font-size: var(--tres-gros-texte);
 }
 
-.MissionsFrieden p, .MissionsLeo p{
+.MissionsFrieden, .MissionsLeo{
     display: flex;
-    max-width: 70vw;
-    min-width: 20vw;
+    flex-direction: column;
     justify-content: center;
 }
 .MissionsLeo h2, .MissionsFrieden h2{
