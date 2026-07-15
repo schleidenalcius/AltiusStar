@@ -48,14 +48,12 @@ a{
     background-color: var(--vert-lime);
     
 }   
+
 .ContenantPersonnages {
     display: flex;
-    margin-top: 20px;
-    justify-content: space-evenly;
-}
-.ContenuLeo, .ContenuFrieden {
-    display: flex;
     gap:10vw;
+    margin-left: auto;
+    margin-right: auto;
     width:40vw;
     max-width: 70vw;
     min-width: 20vw;
@@ -64,7 +62,9 @@ a{
     background-color: var(--vert-de-pousse);
     border-radius: 10px;
     border: var(--vert-sombre) 2px solid;
+    margin-top: 20px;
 }
+
 .logo{
     text-align: center;
 }
