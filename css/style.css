@@ -12,6 +12,12 @@
     --vert-lime:#a6c856;
     --beige:#f2e8cf;
     --rouge-sang:#bd4749;
+
+    --largeur-case:5vw;
+    --hauteur-case:5vw;
+    --largeur-contenantPersonnage:70vw;
+    --hauteur-contenantPersonnage:30vh;
+  
 }
 body {
     background-color: var(--beige);
@@ -43,8 +49,8 @@ a{
     justify-content: space-evenly;
     border-radius: 10px;
     border: var(--vert-sombre) 2px solid;
-    width: 60px;
-    height: 60px;
+    width: 5vw;
+    height: 5vh;
     background-color: var(--vert-lime);
     
 }   
@@ -54,17 +60,19 @@ a{
     gap:10vw;
     margin-left: auto;
     margin-right: auto;
-    width:70vw;
+    width: var(--largeur-contenantPersonnage);
+    height:var(--hauteur-contenantPersonnage);
     max-width: 70vw;
     min-width: 20vw;
     justify-content: center;
-    height:50vh;
     background-color: var(--vert-de-pousse);
     border-radius: 10px;
     border: var(--vert-sombre) 2px solid;
-    margin-top: 20px;
+    margin-top: 3vh;
 }
+@media (max-width:1600px){
 
+}
 .logo{
     text-align: center;
 }
