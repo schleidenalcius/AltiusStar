@@ -49,8 +49,8 @@ a{
     justify-content: space-evenly;
     border-radius: 10px;
     border: var(--vert-sombre) 2px solid;
-    width: 5vw;
-    height: 5vh;
+    width: 100px;
+    height: 100px;
     background-color: var(--vert-lime);
     
 }   
@@ -62,16 +62,11 @@ a{
     margin-right: auto;
     width: var(--largeur-contenantPersonnage);
     height:var(--hauteur-contenantPersonnage);
-    max-width: 70vw;
-    min-width: 20vw;
     justify-content: center;
     background-color: var(--vert-de-pousse);
     border-radius: 10px;
     border: var(--vert-sombre) 2px solid;
     margin-top: 3vh;
-}
-@media (max-width:1600px){
-
 }
 .logo{
     text-align: center;
@@ -107,4 +102,27 @@ h1{
     margin-left: auto;
     margin-right: auto;
     justify-content: space-evenly;
+}
+@media (min-width: 1600px){
+    .ContenantPersonnages{
+        width: 50vw;
+        gap:5vw;
+    }
+}
+@media (max-width: 1100px){
+    .ContenantPersonnages{
+        gap:3vw;
+    }
+}
+@media (max-width: 760px){
+    .ContenantPersonnages{
+        width: 100vw;
+        gap:4vw;
+    }
+}
+@media (max-width: 470px){
+    .caseAvenir{
+        width: 75px;
+        height: 75px;
+    }
 }
