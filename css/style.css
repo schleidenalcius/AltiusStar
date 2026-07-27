@@ -117,6 +117,7 @@ h1{
 @media (max-width: 760px){
     .ContenantPersonnages{
         width: 100vw;
+        height:40vh; 
         gap:4vw;
     }
 }
