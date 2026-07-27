@@ -1,2 +1,2 @@
 # AltiusStar
-Création de personnages fictifs qu'on incarne dans nos vies en réalisant leurs objectifs.
+Création de personnages fictifs que j'incarne dans ma vie en réalisant leurs objectifs.
