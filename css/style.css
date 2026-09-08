@@ -41,18 +41,12 @@ a{
     text-decoration: none;
     margin-right:20px;
 }
-.caseAvenir {
-    display: flex;
-    font-size: 32px;
-    align-items: center;
-    color: var(--vert-sombre);
-    justify-content: space-evenly;
+.caseAvenir {    
     border-radius: 10px;
     border: var(--vert-sombre) 2px solid;
     width: 100px;
-    height: 100px;
-    background-color: var(--vert-lime);
-    
+    height: 100px; 
+    object-fit: cover;
 }   
 
 .ContenantPersonnages {
