@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altius Star</title>
+    <link rel="icon" type="image/x-icon" href="../Images/LogoAS.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styleOutils.css">
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Accueil</a>
+        <a href="Missions.html">Missions</a>
+        <a class="actuel" href="Outils.html">Outils</a>
+        <a target="_blank" href="https://schleidenalcius.org">Portfolio</a>     
+    </nav>
+    <div class="logo">
+    <img src="../Images/LogoAS.png" alt="Un A et un S, le A est en forme de livre
+    et la barre du milieu du A est une moustache." width="200px">
+    <h1>Altius Star</h1>
+    <h2 class="outilDeFALL">Les outils de FALL le musicien physicien</h2>
+
+    <section class="jouerAvecLesSons">
+        <div class="LeJeuDeSon">
+            <h2>Testez votre oreille</h2>
+             <audio class="jeu" controls>
+            <source type="audio/mpeg">
+            Votre navigateur ne supporte pas la lecture audio.
+            </audio>
+            <p>Quel est la note qui est jouée?</p>
+            <p id="leResultat">Jouez!</p>
+            
+            <div class="blocGrilleJeu">
+                <div class="GrilleDeNotes">
+                    <p class="note">Do</p>
+                    <p class="note">Do#</p>
+                    <p class="note">Re</p>
+                    <p class="note">Re#</p>
+                    <p class="note">Mi</p>
+                    <p class="note">Fa</p>
+                    <p class="note">Fa#</p>
+                    <p class="note">Sol</p>
+                    <p class="note">Sol#</p>
+                    <p class="note">La</p>
+                    <p class="note">La#</p>
+                    <p class="note">Si</p>
+                </div>
+                <div>
+                    <img id="imgNote" src="" alt="">
+                </div>
+            </div>
+            <button type="submit">Tester</button>
+        </div>
+    </section>
+    
+    <script src="../script/script.js"></script>
+</body>
+</html>

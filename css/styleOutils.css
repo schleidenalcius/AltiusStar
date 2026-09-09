@@ -1,0 +1,60 @@
+:root{
+    --facteur-echelle: 1.125;
+    --font-size: 18px;
+    --petit-texte: var(--font-size);
+    --tres-petit-texte: calc(var(--petit-texte) / var(--facteur-echelle));
+    --texte-moyen: calc(var(--petit-texte) * var(--facteur-echelle));
+    --gros-texte: calc(var(--texte-moyen) * var(--facteur-echelle));
+    --tres-gros-texte: calc(var(--gros-texte) * var(--facteur-echelle));
+
+    --vert-sombre:#386641;
+    --vert-de-pousse:#69974e;
+    --vert-lime:#a6c856;
+    --beige:#f2e8cf;
+    --rouge-sang:#bd4749;
+
+    --largeur-case:5vw;
+    --hauteur-case:5vw;
+    --largeur-contenantPersonnage:70vw;
+    --hauteur-contenantPersonnage:30vh;
+  
+}
+
+/* Section accueil Jeu1*/
+.jouerAvecLesSons{
+    display: flex;
+    justify-content: center;
+}
+.LeJeuDeSon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.GrilleDeNotes{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    border: 4px solid var(--vert-de-pousse);
+    border-radius: 5px;
+    padding: 20px;
+}
+.GrilleDeNotes p:hover{
+    border: 2px solid var(--vert-lime);
+    border-radius: 5px;
+}
+.blocGrilleJeu{
+    display: block;
+}
+button{
+    width: 200px;
+    font-size: var(--gros-Texte);
+    border-radius: 5px;
+    background-color: var(--vert-lime);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--rouge-sang);
+    margin-bottom: 10vh;;
+}
+#imgNote{
+    border-radius: 5px;
+}
+
