@@ -9,6 +9,16 @@ let cheminImgNote = "../Images/jeu1/";
 let rentrerUnePremièreFois = 0;
 let echouerUnePremièreFois = 0;
 
+/*variable pour le jeu 2*/
+let cheminImgGamme = "../Images/jeu2/";
+let imgGamme = document.querySelector("#imgGamme");
+let btnGamme = document.querySelectorAll(".gamme");
+let gammeJoue = document.querySelector(".jeuGammeMajeur");
+let cheminGamme= "../Sons/jeu2/";
+let btnTesterGamme = document.querySelector("#btnGamme");
+let leResultatGammeMajeur= document.querySelector("#leResultatGammeMajeur");
+let rentrerUnePremièreFoisGamme = 0;
+let echouerUnePremièreFoisGamme = 0;
 /*Déclarations de mes fonctions*/
 
 /*Cette fonction permet de choisir un son aléeatoire parmi 12 sons*/
@@ -69,6 +79,71 @@ function choisirUnSon(){
     modifierSonJoue();
 }
 
+/*Cette fonction permet de choisir une gamme aléeatoire parmi 12 gammes*/
+function choisirUneGamme(){
+    let numeroAleatoire = Math.ceil(Math.random()*12);
+    switch (numeroAleatoire){
+        case 1:
+            cheminGamme = cheminGamme + "doM.mp3";
+            cheminImgGamme = cheminImgGamme+"doM.png";
+        break;
+        case 2:
+            cheminGamme = cheminGamme + "rebM.mp3";
+            cheminImgGamme = cheminImgGamme+"rebM.png";
+        break;
+        case 3:
+            cheminGamme = cheminGamme + "reM.mp3";
+            cheminImgGamme = cheminImgGamme+"reM.png";
+        break;
+        case 4:
+            cheminGamme = cheminGamme + "mibM.mp3";
+            cheminImgGamme = cheminImgGamme+"mibM.png";
+        break;
+        case 5:
+            cheminGamme = cheminGamme + "miM.mp3";
+            cheminImgGamme = cheminImgGamme+"miM.png";
+        break;
+        case 6:
+            cheminGamme = cheminGamme + "faM.mp3";
+            cheminImgGamme = cheminImgGamme+"faM.png";
+        break;
+        case 7:
+            cheminGamme = cheminGamme + "solbM.mp3";
+            cheminImgGamme = cheminImgGamme+"solbM.png";
+        break;
+        case 8:
+            cheminGamme = cheminGamme + "solM.mp3";
+            cheminImgGamme = cheminImgGamme+"solM.png";
+        break;
+        case 9:
+            cheminGamme = cheminGamme + "labM.mp3";
+            cheminImgGamme = cheminImgGamme+"labM.png";
+        break;
+        case 10:
+            cheminGamme = cheminGamme + "laM.mp3";
+            cheminImgGamme = cheminImgGamme+"laM.png";
+        break;
+        case 11:
+            cheminGamme = cheminGamme + "sibM.mp3";
+            cheminImgGamme = cheminImgGamme+"sibM.png";
+        break;
+        case 12:
+            cheminGamme = cheminGamme + "siM.mp3";
+            cheminImgGamme = cheminImgGamme+"siM.png";
+        break;
+    }
+   
+
+    modifierGammeJoue();
+}
+/*Fonction qui permet de changer la source de la balise audio du jeu 2*/
+function modifierGammeJoue(){
+    gammeJoue.src= cheminGamme;
+    gammeJoue.load();
+    if(rentrerUnePremièreFoisGamme>0){
+    gammeJoue.play();
+    }
+}
 /*Fonction qui permet de changer la source de la balise audio*/
 function modifierSonJoue(){
     sonJoue.src= chemin;
@@ -79,7 +154,7 @@ function modifierSonJoue(){
 }
 
 choisirUnSon();
-
+choisirUneGamme();
 
 /*fonction pour assigner un événement aux notes*/
 function testerSons(){
@@ -112,8 +187,40 @@ function testerSons(){
         });
     });
 }
-
+/*fonction pour assigner un événement a une gamme*/
+function testerGamme(){
+    btnGamme.forEach((gamme)=>{
+        gamme.addEventListener("click",(event)=>{
+            event.preventDefault();
+            let laGamme = gamme.textContent;  
+            console.log(laGamme);       
+            const nomFichier = cheminGamme.split("/");   
+            const nomFichierNettoye=nomFichier[3].split(".")[0];
+            console.log(nomFichierNettoye);
+            if (laGamme===nomFichierNettoye){
+                leResultatGammeMajeur.textContent="Réussi";
+                imgGamme.src=cheminImgGamme;
+            }else{
+                switch(echouerUnePremièreFois){
+                    case 0:
+                    leResultat.textContent="Vous y êtes presque! Recommencer";
+                    echouerUnePremièreFois++;
+                    break;
+                    case 1:
+                    leResultat.textContent="Continue!";
+                    echouerUnePremièreFois++;
+                    break;
+                    case 2:
+                    leResultat.textContent="Courage, tu fais de ton mieux";
+                    echouerUnePremièreFois=0;
+                    break;
+                }
+            }
+        });
+    });
+}
 testerSons();
+testerGamme();
 btnTester.addEventListener("click", ()=>{
    chemin = "../Sons/jeu1/";
    cheminImgNote = "../Images/jeu1/";
@@ -122,4 +229,13 @@ btnTester.addEventListener("click", ()=>{
    rentrerUnePremièreFois=1;
    choisirUnSon();
    testerSons();
+});
+btnTesterGamme.addEventListener("click", ()=>{
+   cheminGamme = "../Sons/jeu2/";
+   cheminImgGamme = "../Images/jeu2/";
+   imgGamme.src="";
+   leResultatGammeMajeur.textContent="Jouez!";
+   rentrerUnePremièreFoisGamme=1;
+   choisirUneGamme();
+   testerGamme();
 });

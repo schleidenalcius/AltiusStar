@@ -23,6 +23,7 @@
 /* Section accueil Jeu1*/
 .jouerAvecLesSons{
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 .LeJeuDeSon{
@@ -30,7 +31,7 @@
     flex-direction: column;
     align-items: center;
 }
-.GrilleDeNotes{
+.GrilleDeNotes, .GrilleDeGammes{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 15px;
@@ -38,7 +39,7 @@
     border-radius: 5px;
     padding: 20px;
 }
-.GrilleDeNotes p:hover{
+.GrilleDeNotes p:hover, .GrilleDeGammes p:hover{
     border: 2px solid var(--vert-lime);
     border-radius: 5px;
 }
