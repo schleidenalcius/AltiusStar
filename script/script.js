@@ -203,15 +203,15 @@ function testerGamme(){
             }else{
                 switch(echouerUnePremièreFois){
                     case 0:
-                    leResultat.textContent="Vous y êtes presque! Recommencer";
+                    leResultatGammeMajeur.textContent="Vous y êtes presque! Recommencer";
                     echouerUnePremièreFois++;
                     break;
                     case 1:
-                    leResultat.textContent="Continue!";
+                    leResultatGammeMajeur.textContent="Continue!";
                     echouerUnePremièreFois++;
                     break;
                     case 2:
-                    leResultat.textContent="Courage, tu fais de ton mieux";
+                    leResultatGammeMajeur.textContent="Courage, tu fais de ton mieux";
                     echouerUnePremièreFois=0;
                     break;
                 }

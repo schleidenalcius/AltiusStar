@@ -86,7 +86,30 @@ h1{
     flex-direction: column;
     justify-content: center;
 }
-
+footer{
+    display: flex;
+    gap: 3%;
+    background-color: var(--vert-sombre);
+    justify-content: space-evenly;
+    position: fixed;
+    bottom:0;
+    width: 100vw;
+}
+footer img{
+    width: 100px;
+    padding: 20px 0;
+    border-radius: 50%;
+}
+.unFooterPersonnage{
+    display: flex;
+    flex-direction: column;
+}
+.unFooterPersonnage p{
+    color: var(--vert-lime);
+}
+.jouerAvecLesSons, .MissionsCoisabafe{
+   padding-bottom: 20vh;
+}
 .outilDeFALL, .MissionsLeo h2, .MissionsFrieden h2, .MissionsCoisabafe h2, .MissionsFALL h2{
     background-color: var(--vert-lime);
     border:var(--vert-sombre) 2px solid;
@@ -98,7 +121,7 @@ h1{
     justify-content: space-evenly;
 }
 @media (min-width: 1600px){
-    .ContenantPersonnages{
+    .ContenantPersonnages, .missions p{
         width: 50vw;
         gap:5vw;
     }
@@ -107,17 +130,27 @@ h1{
     .ContenantPersonnages{
         gap:3vw;
     }
+    .missions p{
+        width: 60vw;
+    }
 }
+
 @media (max-width: 760px){
     .ContenantPersonnages{
         width: 100vw;
         height:40vh; 
         gap:4vw;
     }
+    .missions p{
+        width: 70vw;
+    }
 }
 @media (max-width: 470px){
     .caseAvenir{
         width: 75px;
         height: 75px;
+    }
+    .missions p{
+        width: 80vw;
     }
 }
