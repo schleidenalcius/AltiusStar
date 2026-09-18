@@ -138,7 +138,7 @@ footer img{
 @media (max-width: 760px){
     .ContenantPersonnages{
         width: 100vw;
-        height:40vh; 
+        height:25vh; 
         gap:4vw;
     }
     .missions p{
@@ -152,5 +152,13 @@ footer img{
     }
     .missions p{
         width: 80vw;
+    }
+    .unFooterPersonnage img{
+        width: 75px;
+        height: 75px;
+    }
+    .ContenantPersonnages{
+        margin-bottom: 30%;
+        height: 20vh;
     }
 }
