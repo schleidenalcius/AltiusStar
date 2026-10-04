@@ -81,7 +81,7 @@ h1{
     font-size: var(--tres-gros-texte);
 }
 
-.MissionsFrieden, .MissionsLeo{
+.MissionsFrieden, .MissionsLeo, .MissionsCoisabafe, .MissionsFALL{
     display: flex;
     flex-direction: column;
     justify-content: center;
